@@ -15,7 +15,8 @@ const zhai = {
     "cpp",
     "java",
     "kotlin",
-    "python"
+    "python",
+    "go"
   ],
   classes: [
     Class.design_tech,

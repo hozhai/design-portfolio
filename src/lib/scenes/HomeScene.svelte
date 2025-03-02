@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { T, useTask } from '@threlte/core';
-	import { interactivity } from '@threlte/extras';
+	import { interactivity, useTexture } from '@threlte/extras';
 	import { Spring } from 'svelte/motion';
 
 	interactivity();
@@ -20,21 +20,23 @@
 
 <T.PerspectiveCamera
 	makeDefault
-	position={[0.5, 2, 0]}
+	position={[0.5, 1.8, 0]}
 	oncreate={(ref) => {
-		ref.lookAt(4, 3, 0);
+		ref.lookAt(4, 2.8, 0);
 	}}
 />
 
-<T.DirectionalLight position={[0.2, 0.3, 0.25]} color="#f1f1f1" />
+<T.DirectionalLight position={[-0.4, 0.3, 0.4]} color="#f1f1f1" intensity={2} />
 
-<T.Mesh
-	position={[3, pos.current, 0]}
-	rotation={[1, 1, rotation]}
-	scale={scale.current}
-	onpointerenter={() => (scale.target = 1.05)}
-	onpointerleave={() => (scale.target = 1)}
->
-	<T.IcosahedronGeometry args={[2, 2, 2]} />
-	<T.MeshStandardMaterial color="#ffffff" />
-</T.Mesh>
+{#await useTexture('src/lib/assets/earth_texture.jpg') then texture}
+	<T.Mesh
+		position={[3, pos.current, 0]}
+		rotation={[1, 1, rotation]}
+		scale={scale.current}
+		onpointerenter={() => (scale.target = 1.05)}
+		onpointerleave={() => (scale.target = 1)}
+	>
+		<T.IcosahedronGeometry args={[2, 2, 2]} />
+		<T.MeshStandardMaterial color="#ffffff" map={texture} />
+	</T.Mesh>
+{/await}

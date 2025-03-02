@@ -4,7 +4,10 @@
 	import '@fontsource/space-mono';
 	import '@fontsource-variable/material-symbols-rounded';
 
+	import Navbar from '@/components/Navbar.svelte';
+
 	let { children } = $props();
 </script>
 
+<Navbar />
 {@render children()}

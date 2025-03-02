@@ -1,29 +1,17 @@
 <script lang="ts">
-	import { Canvas } from '@threlte/core';
-	import HomeScene from '@/scenes/HomeScene.svelte';
 	import CarouselHome from '@/components/CarouselHome.svelte';
 
 	// @ts-ignore
-	import Introduction from '@/mdx/intro.svx';
+	import Introduction from '@/mdx/intro.md';
+	import Hero from '@/sections/Hero.svelte';
+	import Footer from '@/sections/Footer.svelte';
 </script>
 
 <svelte:head>
 	<title>Zhai Portfolio</title>
 </svelte:head>
 
-<section class="grid min-h-screen place-items-center">
-	<span class="absolute bottom-0 w-full">
-		<Canvas>
-			<HomeScene />
-		</Canvas>
-	</span>
-
-	<article>
-		<h2 class="text-6xl">Hey! 👋</h2>
-		<h1 class="text-8xl">I'm Hongmeng Zhai</h1>
-		<h3 class="font-mono text-2xl text-stone-200">Full-Stack Web Developer and Designer</h3>
-	</article>
-</section>
+<Hero />
 
 <section class="bg-stone-800 p-18">
 	<h2 class="text-6xl">
@@ -51,7 +39,9 @@
 				along with my saxophone! I've been having a lot of motivation to get into poetry recently,
 				and I'm loving it so far (thank youuu Emiliaaa) &lt;333
 			</p>
-			<Introduction />
+			<span class="text-lg">
+				<Introduction />
+			</span>
 		</div>
 		<div class="w-[48%]">
 			<CarouselHome />
@@ -80,3 +70,9 @@
 		</div>
 	</div>
 </section>
+
+<hr class="h-10 bg-gradient-to-b from-stone-800 to-zinc-800 text-stone-800" />
+
+<section class="bg-zinc-800"></section>
+
+<Footer />

@@ -3,6 +3,11 @@ import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import rehypePrism from 'rehype-prism-plus';
+import rehypeKatex from "rehype-katex"
+import remarkGfm from "remark-gfm"
+import remarkMath from "remark-math"
+import remarkFrontmatter from "remark-frontmatter"
+import remarkMdxFrontmatter from "remark-mdx-frontmatter"
 
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -11,7 +16,9 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		mdsvex({
-			rehypePlugins: [rehypePrism]
+			extensions: [".md", ".svx"],
+			rehypePlugins: [rehypePrism, rehypeKatex],
+			remarkPlugins: [remarkGfm, remarkMath, remarkFrontmatter, remarkMdxFrontmatter]
 		}),
 		vitePreprocess()
 	],
@@ -23,7 +30,7 @@ const config = {
 		}
 	},
 
-	extensions: ['.svelte', '.svx']
+	extensions: ['.svelte', '.svx', '.md']
 };
 
 export default config;
