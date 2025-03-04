@@ -1,14 +1,11 @@
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-import rehypePrism from 'rehype-prism-plus';
-import rehypeKatex from "rehype-katex"
 import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
-import remarkFrontmatter from "remark-frontmatter"
-import remarkMdxFrontmatter from "remark-mdx-frontmatter"
-
+import rehypeKatexSvelte from 'rehype-katex-svelte';
+import rehypeHighlight from "rehype-highlight"
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,10 +14,15 @@ const config = {
 	preprocess: [
 		mdsvex({
 			extensions: [".md", ".svx"],
-			rehypePlugins: [rehypePrism, rehypeKatex],
-			remarkPlugins: [remarkGfm, remarkMath, remarkFrontmatter, remarkMdxFrontmatter]
+			remarkPlugins: [remarkMath, remarkGfm],
+			rehypePlugins: [rehypeKatexSvelte, rehypeHighlight],
+			highlight: {
+				highlighter: async (code, lang) => {
+					return `<pre><code class="language-${lang}">${escapeSvelte(code)}</code></pre>`
+				}
+			}
 		}),
-		vitePreprocess()
+		vitePreprocess(),
 	],
 
 	kit: {

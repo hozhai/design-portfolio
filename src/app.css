@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 @plugin 'daisyui' {
 	themes: dark --default;
 }
@@ -26,10 +27,6 @@
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
-}
-
-pre {
-	overflow-x: auto;
 }
 
 /* theme */
@@ -176,11 +173,16 @@ pre[class*='language-'] {
 .token.deleted {
 	background: #fb4934; /* red2 */
 }
+
 /**
  * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
  * 1. Make the element just wide enough to fit its content.
  * 2. Always fill the visible space in .code-highlight.
  */
+pre {
+	overflow-x: auto;
+}
+
 .code-highlight {
 	float: left; /* 1 */
 	min-width: 100%; /* 2 */

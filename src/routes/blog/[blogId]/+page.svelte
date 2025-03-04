@@ -1,14 +1,24 @@
 <script lang="ts">
-	let { data }: { data: { component: any; metadata: any } } = $props();
+	import Footer from '@/sections/Footer.svelte';
+	import type { BlogData } from './page';
+
+	let { data }: BlogData = $props();
 </script>
 
-<div>
+<section class="mt-32 flex w-full justify-center">
 	{#if data.component}
-		<data.component />
-		<p>
-			{JSON.stringify(data.metadata, null, 2)}
-		</p>
+		<article class="prose prose-stone prose-lg bg-black/20 px-20 pt-20 pb-10">
+			<h1>
+				<span class="text-stone-300">| </span>
+				{data.metadata.title}
+			</h1>
+			<h3 class="text-gray-300">{data.metadata.description}</h3>
+			<hr />
+			<data.component />
+		</article>
 	{:else}
-		<p>Component not found</p>
+		<p>Error: Blog Not Found</p>
 	{/if}
-</div>
+</section>
+
+<Footer />
