@@ -6,7 +6,7 @@ export interface BlogData {
 		metadata: {
 			title: string;
 			description: string;
-			timestamp: bigint;
+			timestamp: int;
 		};
 	};
 }

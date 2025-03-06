@@ -1,11 +1,15 @@
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { unified } from 'unified';
 
-import remarkGfm from "remark-gfm"
-import remarkMath from "remark-math"
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
-import rehypeHighlight from "rehype-highlight"
+import rehypeHighlight from 'rehype-highlight';
+import rehypeHighlightLines from 'rehype-highlight-code-lines';
+import rehypeParse from 'rehype-parse';
+import rehypeStringify from 'rehype-stringify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,26 +17,35 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		mdsvex({
-			extensions: [".md", ".svx"],
+			extensions: ['.md'],
 			remarkPlugins: [remarkMath, remarkGfm],
-			rehypePlugins: [rehypeKatexSvelte, rehypeHighlight],
+			rehypePlugins: [rehypeKatexSvelte],
 			highlight: {
-				highlighter: async (code, lang) => {
-					return `<pre><code class="language-${lang}">${escapeSvelte(code)}</code></pre>`
+				highlighter: async (code, lang, meta) => {
+					const content = `<pre><code class="language-${lang}" data-highlight-lines="${meta}">${escapeSvelte(code)}</code></pre>`;
+
+					const html = await unified()
+						.use(rehypeParse, { fragment: true })
+						.use(rehypeHighlight)
+						.use(rehypeHighlightLines, { showLineNumbers: true })
+						.use(rehypeStringify)
+						.process(content);
+
+					return escapeSvelte(html.toString());
 				}
 			}
 		}),
-		vitePreprocess(),
+		vitePreprocess()
 	],
 
 	kit: {
 		adapter: adapter(),
 		alias: {
-			"@/*": "./src/lib/*"
+			'@/*': './src/lib/*'
 		}
 	},
 
-	extensions: ['.svelte', '.svx', '.md']
+	extensions: ['.svelte', '.md']
 };
 
 export default config;

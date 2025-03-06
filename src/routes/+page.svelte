@@ -13,7 +13,7 @@
 
 <Hero />
 
-<section class="bg-stone-800 p-18">
+<section class="bg-base-200 p-18">
 	<h2 class="text-6xl">
 		<span class="text-stone-500">| </span>
 		<span class="underline">Introduction</span>
@@ -70,9 +70,5 @@
 		</div>
 	</div>
 </section>
-
-<hr class="h-10 bg-gradient-to-b from-stone-800 to-zinc-800 text-stone-800" />
-
-<section class="bg-zinc-800"></section>
 
 <Footer />

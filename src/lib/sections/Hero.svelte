@@ -3,7 +3,7 @@
 	import HomeScene from '@/scenes/HomeScene.svelte';
 </script>
 
-<section class="grid min-h-screen place-items-center">
+<section class="bg-base-100 grid min-h-screen place-items-center">
 	<span class="absolute bottom-0 w-full">
 		<Canvas>
 			<HomeScene />
