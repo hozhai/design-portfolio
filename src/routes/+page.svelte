@@ -1,4 +1,6 @@
 <script lang="ts">
+	import './blog/[blogId]/page.css';
+
 	import CarouselHome from '@/components/CarouselHome.svelte';
 
 	// @ts-ignore
@@ -22,7 +24,7 @@
 		<div class="w-1/2 space-y-8 text-xl">
 			<p>
 				Hi! I'm legally Fanhongmeng Zhai Fan, actually Hongmeng Zhai, technically <br />翟洪蒙,
-				usually just Zhai, and I go by he/him :)
+				usually just Zhai, and I go by he/him/they/them :)
 			</p>
 			<p>
 				I'm a sophomore at Nido, and I've been here since 9th grade! Before that I was previously in

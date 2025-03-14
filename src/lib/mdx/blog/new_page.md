@@ -53,7 +53,7 @@ Oh, and the button doesn't do anything. Don't try.
 We can also do math equations here now!
 
 $$
-\frac{d}{dx} f\relax(x) = \lim_{h \to 0}\frac{f\relax(x + h) - f\relax(x)}{h}
+f^{\prime}\relax(x) = \lim_{h \to 0}\frac{f\relax(x + h) - f\relax(x)}{h}
 $$
 
 I'm genuinely really proud of what I've done here, and I'll most likely stick with this page from now on. I love all of you!!!
