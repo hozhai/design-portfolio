@@ -46,7 +46,9 @@ The dependencies that are used here are _actually_ necessary, and they all get c
 
 The files used to storage the blogs actually uses the MDX (using MDsveX) format, meaning that I can also add Svelte components in here if I wanted to. Here's a button! Check the [source code here](https://github.com/hozhai/design-portfolio) if you want to see how it works behind the hood :)
 
-<button class="btn btn-primary" onclick={() => alert("I lied, this does do something :)")}>I'm a button!</button>
+<button class="btn btn-primary" onclick={() => {open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank"); alert("AHA! Get Rickrolled <3")}}>
+  I'm a button!
+</button>
 
 Oh, and the button doesn't do anything. Don't try.
 

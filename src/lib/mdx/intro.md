@@ -1,7 +1,8 @@
 ```ts
 import { Class } from '@nidodeaguilas/sophomore';
+import type { Human, ZhaiLike } from "@hozhai/some-weird-package";
 
-const zhai = {
+const zhai: Human&lt;ZhaiLike&gt; = {
 	name: 'Hongmeng Zhai',
 	age: 16,
 	birthday: new Date(1222687800000),
@@ -36,4 +37,6 @@ const zhai = {
 		'is ambidextrous'
 	]
 };
+
+console.log(JSON.stringify(zhai, null, 2));
 ```

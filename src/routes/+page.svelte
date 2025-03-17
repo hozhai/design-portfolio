@@ -15,7 +15,7 @@
 
 <Hero />
 
-<section class="bg-base-200 p-18">
+<section class="bg-base-200 p-18" id="intro">
 	<h2 class="text-6xl">
 		<span class="text-stone-500">| </span>
 		<span class="underline">Introduction</span>
