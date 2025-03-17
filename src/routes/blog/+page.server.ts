@@ -8,7 +8,7 @@ const blogsArr: Blog[] = [
 		title: 'Whole Page Revamp',
 		description: 'Full migration to SvelteKit, actual good coding practices, and more!',
 		slug: 'new_page',
-		timestamp: 1741140671708
+		timestamp: 1742177352978
 	}
 ];
 

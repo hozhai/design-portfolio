@@ -1,7 +1,7 @@
 ---
 title: Whole page revamp!
 description: Full migration to SvelteKit, actual good coding practices, and more!
-timestamp: 1741140671708
+timestamp: 1742177352978
 ---
 
 ## Hey everyone!
