@@ -1,8 +1,8 @@
 ```ts
 import { Class } from '@nidodeaguilas/sophomore';
-import type { Human, ZhaiLike } from "@hozhai/some-weird-package";
+import type { Human, ZhaiLikeHumanoid } from "@hozhai/some-weird-package";
 
-const zhai: Human&lt;ZhaiLike&gt; = {
+const zhai: Human&lt;ZhaiLikeHumanoid&gt; = {
 	name: 'Hongmeng Zhai',
 	age: 16,
 	birthday: new Date(1222687800000),

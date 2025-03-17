@@ -7,7 +7,9 @@
 <Navbar />
 
 <section>
-	<h1 class="mt-32 text-center text-6xl">Latest Posts</h1>
+	<header>
+		<h1 class="mt-32 text-center text-6xl">Latest Posts</h1>
+	</header>
 	<div class="mt-20 flex w-full flex-col items-center justify-center space-y-12">
 		{#each data.data as blog}
 			<a
