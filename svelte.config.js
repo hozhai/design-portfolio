@@ -2,6 +2,7 @@ import { mdsvex, escapeSvelte } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { unified } from 'unified';
+import { enhancedImages } from 'mdsvex-enhanced-images';
 
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -18,7 +19,7 @@ const config = {
 	preprocess: [
 		mdsvex({
 			extensions: ['.md'],
-			remarkPlugins: [remarkMath, remarkGfm],
+			remarkPlugins: [enhancedImages, remarkMath, remarkGfm ],
 			rehypePlugins: [rehypeKatexSvelte],
 			highlight: {
 				highlighter: async (code, lang, meta) => {

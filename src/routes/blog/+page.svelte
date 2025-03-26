@@ -14,7 +14,7 @@
 		{#each data.data as blog}
 			<a
 				href="/blog/{blog.slug}"
-				class="bg-base-200 relative p-10 shadow-md transition-all hover:shadow-xl hover:brightness-110"
+				class="bg-base-200 relative min-w-1/2 p-10 shadow-md transition-all hover:shadow-xl hover:brightness-110"
 			>
 				<article
 					class="prose prose-blockquote:font-light prose-blockquote:not-italic prose-blockquote:text-xl"

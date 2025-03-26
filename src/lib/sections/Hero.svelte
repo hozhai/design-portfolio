@@ -4,12 +4,12 @@
 </script>
 
 <section class="bg-base-100 grid min-h-screen place-items-center">
-	<span class="absolute bottom-0 w-full">
+	<!-- <span class="absolute bottom-0 w-full">
 		<Canvas>
 			<HomeScene />
 		</Canvas>
 	</span>
-
+ -->
 	<article>
 		<h2 class="text-6xl" onvisibilitychange={(event) => {}}>Hey! 👋</h2>
 		<h1 class="text-8xl">I'm Hongmeng Zhai</h1>
