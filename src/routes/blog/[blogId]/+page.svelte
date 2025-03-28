@@ -17,36 +17,38 @@
 </svelte:head>
 
 <section class="mt-32 flex w-full justify-center">
-	{#if data.component}
-		<article
-			class="prose prose-stone prose-lg prose-img:rounded-xl bg-base-200 shadow-base-300 border-t-2 border-t-white px-20 pt-5 pb-10 shadow-2xl"
-		>
-			<header>
-				<span class="breadcrumbs text-sm">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/blog">Blogs</a></li>
-						<li>{data.metadata.title}</li>
-					</ul>
-				</span>
-				<h1>
-					<span class="text-gray-300">&gt; </span>
-					{data.metadata.title}
-				</h1>
-				<blockquote class="text-gray-300">
-					{data.metadata.description}
-					<br />
-					<span class="text-sm text-gray-500"
-						>Last updated: {new Date(data.metadata.timestamp)}</span
-					>
-				</blockquote>
-			</header>
-			<hr />
-			<data.component />
-		</article>
-	{:else}
-		<p>Error: Blog Not Found</p>
-	{/if}
+	{#await data then}
+		{#if data.component}
+			<article
+				class="prose prose-stone prose-lg prose-img:rounded-xl bg-base-200 shadow-base-300 border-t-2 border-t-white px-20 pt-5 pb-10 shadow-2xl"
+			>
+				<header>
+					<span class="breadcrumbs text-sm">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/blog">Blogs</a></li>
+							<li>{data.metadata.title}</li>
+						</ul>
+					</span>
+					<h1>
+						<span class="text-gray-300">&gt; </span>
+						{data.metadata.title}
+					</h1>
+					<blockquote class="text-gray-300">
+						{data.metadata.description}
+						<br />
+						<span class="text-sm text-gray-500"
+							>Last updated: {new Date(data.metadata.timestamp)}</span
+						>
+					</blockquote>
+				</header>
+				<hr />
+				<data.component />
+			</article>
+		{:else}
+			<p>Error: Blog Not Found</p>
+		{/if}
+	{/await}
 </section>
 
 <Footer />
