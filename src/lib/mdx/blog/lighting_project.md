@@ -54,7 +54,7 @@ After each of us did this, we converged (merged) our ideas by ranking each of th
 
 We ended up with a product which is a phone case consisting of a built-in bolt designed to be used to stab inside trees or between rocks to fix the phone into place along with a amplifying cone which allows for the light to be amplified and have its angle adjusted.
 
-# Sketches
+## Sketches
 
 We made 3 models of this: a product sketch which was an orthographic drawing, a physical model, and a digital model.
 
@@ -72,7 +72,7 @@ All in all, it was a pretty fun project!
 
 Here's a table comparing the three ways of representing a product :)
 
-| **Criteria**        |  Napkin Sketches  |  Product Sketches  |  Physical Model  |  Digital Model  |
+| **Criteria**        |  Napkin Sketches  |  Orthographic Sketches  |  Physical Model  |  Digital Model  |
 |---------------------|:-----------------:|:------------------:|:----------------:|:---------------:|
 | Fast to make        |         ✅         |  ❌                 | ❌                | ❌               |
 | Needs few resources |         ✅         | ✅                  | ❌                | 🟡*              |
