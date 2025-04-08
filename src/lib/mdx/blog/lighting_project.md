@@ -30,12 +30,12 @@ A lot of these revolved around making the most out of the phone's flashlight or 
 
 We did, however, need to make sure that the design we settled on had to have certain criteria and constraints. Criteria are goals we need to meet, and constraints are the limits we need to keep in mind for whilst trying to achieve these goals.
 
-|                               Criteria                               |                            Constraints                           |
+|                               Criteria                               |                           Constraints                            |
 |:--------------------------------------------------------------------:|:----------------------------------------------------------------:|
-| Has to be durable and reliable.                                      | Has to either have a reasonable size or be able to be assembled. |
-| Needs to have an adjustable angle, and can also be secured in place. | The production cost must not include money.                      |
-| Can actually light up areas and fulfill its purpose.                 | Needs to be able to be done before the project's deadline.       |
-| Needs to be water resistant.                                         | We can only utilize materials found in the MakerLab.             |
+|                   Has to be durable and reliable.                    | Has to either have a reasonable size or be able to be assembled. |
+| Needs to have an adjustable angle, and can also be secured in place. |           The production cost must not include money.            |
+|         Can actually light up areas and fulfill its purpose.         |    Needs to be able to be done before the project's deadline.    |
+|                     Needs to be water resistant.                     |       We can only utilize materials found in the MakerLab.       |
 
 With these criteria and constraints in mind, we made the aforementioned napkin sketches.
 
