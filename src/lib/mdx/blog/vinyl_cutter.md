@@ -49,3 +49,7 @@ You can also left click and hold to drag a box to select objects and lines, howe
 Dragging left to right will select everything that is fully inside the box; the box also has solid borders.
 
 Dragging right to left will select everything that is touching the box; the box has dashed borders.
+
+Here's the flag of my home country in Rhino!
+
+![CN Flag]($lib/assets/rhino_flag_cn.webp?enhanced)

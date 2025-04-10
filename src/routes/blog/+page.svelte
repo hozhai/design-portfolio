@@ -11,10 +11,10 @@
 		<h1 class="mt-32 text-center text-6xl">Latest Posts</h1>
 	</header>
 	<div class="mt-20 flex w-full flex-col items-center justify-center space-y-12">
-		{#each data.data as blog}
+		{#each data.data as blog (blog.slug)}
 			<a
 				href="/blog/{blog.slug}"
-				class="bg-base-200 relative min-w-1/2 p-10 shadow-md transition-all hover:shadow-xl hover:brightness-110"
+				class="bg-base-200 relative min-w-1/2 p-10 shadow-md transition-all hover:shadow-xl hover:brightness-110 focus-within::cursor-not-allowed focus-within:blur-sm"
 			>
 				<article
 					class="prose prose-blockquote:font-light prose-blockquote:not-italic prose-blockquote:text-xl"
@@ -40,7 +40,7 @@
 		bottom: 0;
 		left: 0;
 		transition: all 0.5s ease-in-out;
-		width: 0%;
+		width: 0;
 		height: 3px;
 		background-color: white;
 	}
