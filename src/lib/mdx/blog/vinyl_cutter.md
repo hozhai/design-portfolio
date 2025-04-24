@@ -1,7 +1,7 @@
 ---
-title: Vinyl Cutter
-description: Design Tech - Using Rhino and a vinyl cutter to make stickers and decals!
-timestamp: 1743679135000
+title: "Vinyl Cutter"
+description: "Design Tech - Using Rhino and a vinyl cutter to make stickers and decals!"
+timestamp: 1745509047000
 ---
 
 # Welcome back!

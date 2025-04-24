@@ -3,7 +3,8 @@
 
 	import CarouselHome from '@/components/CarouselHome.svelte';
 
-	// @ts-ignore
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-expect-error
 	import Introduction from '@/mdx/intro.md';
 	import Hero from '@/sections/Hero.svelte';
 	import Footer from '@/sections/Footer.svelte';

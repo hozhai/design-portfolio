@@ -1,7 +1,7 @@
 ---
 title: "Lighting Project"
 description: "Design Tech - Making a lighting solution with a phone camera to light up in a camping scenario with adjustable height and angle!"
-timestamp: 1742995371000
+timestamp:  1745509046000
 ---
 
 ![Us]($lib/assets/thumbnail.webp?enhanced)
@@ -60,11 +60,11 @@ We made 3 models of this: a product sketch which was an orthographic drawing, a 
 
 You can see the images attached below :)
 
-**![insert orthographic model]($lib/assets/orthographic_sketch.webp?enhanced)**
+**![orthographic model]($lib/assets/orthographic_sketch.webp?enhanced)**
 
 **[insert physical model]**
 
-**[insert digital model embed]**
+**![digital model]($lib/assets/digital_model_lighting.webp?enhanced)**
 
 ## Final Reflection
 
