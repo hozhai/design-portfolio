@@ -60,7 +60,7 @@ We made 3 models of this: a product sketch which was an orthographic drawing, a 
 
 You can see the images attached below :)
 
-**[insert orthographic model]**
+**![insert orthographic model]($lib/assets/orthographic_sketch.webp?enhanced)**
 
 **[insert physical model]**
 

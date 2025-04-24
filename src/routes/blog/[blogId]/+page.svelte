@@ -15,6 +15,15 @@
 		integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib"
 		crossorigin="anonymous"
 	/>
+	{#await data}
+		<title>Loading...</title>
+		{:then blogs}
+		{#if 'file' in blogs}
+			<title>{blogs.file.metadata.title || "404"}</title>
+		{:else}
+			<title>404</title>
+		{/if}
+		{/await}
 </svelte:head>
 
 <section class="mt-32 flex w-full justify-center">
