@@ -54,16 +54,18 @@ Here's the flag of my home country in Rhino!
 
 ![CN Flag]($lib/assets/rhino_flag_cn.webp?enhanced)
 
+## Commands
+
 For the commands, you can simply start typing and you'll see the little box above your command toolbox showing you what you're typing. You can press the *Enter* key to execute the command, or you can also just click on the command in the toolbox.
 
 We're going to work with the `explode` command, which turns a big curve into smaller single and open curves<sup><a href="https://docs.google.com/document/d/1zxbwmq4aCWRUT7lNrqvKN97O5vH6wkhJEFNbDH9WMOw/edit?tab=t.0" target="_blank_">source</a></sup>.
 
 We're also going to work with the following commands:
 
-* `join` - this command will join two or more curves into one single curve.
-* `trim` - this command will delete the section of a curve based on the intersection of another curve or feature.
-* `split` - this command divides objects into parts using other objects as cutters.
-* `break` - this command will remove a portion of a curve between two selected points.
+* `Join` - this command will join two or more curves into one single curve.
+* `Trim` - this command will delete the section of a curve based on the intersection of another curve or feature.
+* `Split` - this command divides objects into parts using other objects as cutters.
+* `Break` - this command will remove a portion of a curve between two selected points.
 
 With this knowledge we can complete the following exercises. These have already been completed by me :)
 
@@ -81,3 +83,48 @@ The reason why we want so many closed curves is to practice actually printing de
 Here's a good demonstration placed on my classroom.
 
 ![Vinyl cutter]($lib/assets/curves_vinyl.webp?enhanced)
+
+## OSnap
+
+There's also a tool called OSnap which stands for object snapping and it allows you to snap to the end of a line, the middle of a line, the intersection of two lines, and the center of a circle. This is very useful for creating shapes that are aligned with each other and creating closed curves. No more tiny gaps between your curves!
+
+You can enable OSnap in the bottom toolbar of Rhino right next to the *SmartTrack* tool. 
+
+After you've enabled it, you'll see these little checkboxes on the bottom left of your screen, something like this:
+
+![OSnap]($lib/assets/osnap.webp?enhanced)
+
+You might not have the exact options enabled, but these are the snapping points that will be made available to you.
+
+Along with OSnap, another useful tool is used: the `move` command.
+
+The move command allows you to move objects around the canvas. You can also use the gumball to move objects around, but the move command is more precise and allows you to move objects to specific points with OSnap enabled.
+
+Try [these](https://drive.google.com/file/d/1W-EXHhbN6jLUPp70WGXYwOEZh8BnW6pu/view?usp=sharing) exercises!
+
+1. ![Exercise 1]($lib/assets/lesson4_one.webp?enhanced)
+2. ![Exercise 2]($lib/assets/lesson4_two.webp?enhanced)
+3. ![Exercise 3]($lib/assets/lesson4_three.webp?enhanced)
+4. ![Exercise 4]($lib/assets/lesson4_four.webp?enhanced)
+
+[Here](https://drive.google.com/file/d/1h3k6L_VLP_ysO0UpIuPbj24sW-8Nu0p_/view) are my finished exercises!
+
+## TextObjects
+
+We will now work with text! Open up Rhino, and type in the command `TextObject`. Make sure to select `TextObject` and not `Text`, as they're very different; `TextObject` makes words with curves that you can control, modify, and manipulate, while `Text`s are just, texts. They don't do much.
+
+You can then select fonts, text styles, etc.!
+
+This time we're going to use 2 commands:
+
+- `TextObject` - this command creates a text object out of curves that can be manipulated and modified.
+- `Offset` - this command creates a new curve that is offset from the original curve. This is useful for creating outlines and borders around shapes.
+- `Hatch` - this command creates a hatch pattern inside a closed curve. This is useful for creating patterns and designs inside shapes. For our use we will just use the solid fill option.
+
+Select one of the letters, and type `Offset`. Make sure to check "Through Point" when you're using the `Offset` command. This will allow you to choose the distance between the offset line and your current line with your mouse instead of having to tweak a number value.
+
+After you're done with that, deselect everything and type Hatch. Select the letter along with its offset line by dragging, and then press Done. After that, you can select the space you want to fill with the hatch. Click the space between the offset line and the original line, and then press Done. You can also select the hatch pattern you want to use, but as aforementioned for our purposes we will just use the solid fill option.
+
+You should see something like this! I chose the font *[Rush Driver](https://www.1001fonts.com/rush-driver-font.html)* and typed "Coding"!
+
+![textobject]($lib/assets/textobject.webp?enhanced)
