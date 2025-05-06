@@ -129,7 +129,7 @@ You should see something like this! I chose the font *[Rush Driver](https://www.
 
 ![textobject]($lib/assets/textobject.webp?enhanced)
 
-## Distance & Dim
+## Distance, Dim, & Scale
 
 If you want to print the project into a vinyl, for example, you would probably want to be able to know the measures inside Rhino; see the length of lines in millimeters, and there's a command for that! Make sure OSnap is turned on, and type `Distance`. Select the two points you want to measure, and it will show you the distance between them in the command line on the bottom of your screen. 
 
@@ -138,3 +138,7 @@ There's another command that goes hand in hand with `Distance`, and it's the `Di
 ![dim]($lib/assets/dim_rhino.webp?enhanced)
 
 **DO** keep in mind that `Dim` will measure the horizontal distance and the vertical distance but not the diagonal distance like `Distance` does.
+
+For irregular shapes, sometimes it might be hard to measure the distance between two points. In this case, you can use the `BoundingBox` command, which will surround your object within a rectangle.
+
+If you want to scale the object to a specific amount, for example, to be 50mm wide, you can use the `Scale` command. This command will allow you to scale the object to a specific size by selecting two points and then entering the desired size.

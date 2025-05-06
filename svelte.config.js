@@ -11,6 +11,8 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeHighlightLines from 'rehype-highlight-code-lines';
 import rehypeParse from 'rehype-parse';
 import rehypeStringify from 'rehype-stringify';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,7 +22,7 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			remarkPlugins: [enhancedImages, remarkMath, remarkGfm ],
-			rehypePlugins: [rehypeKatexSvelte],
+			rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "append" }], rehypeKatexSvelte],
 			highlight: {
 				highlighter: async (code, lang, meta) => {
 					const content = `<pre><code class="language-${lang}" data-highlight-lines="${meta}">${escapeSvelte(code)}</code></pre>`;
