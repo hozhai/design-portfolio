@@ -128,3 +128,13 @@ After you're done with that, deselect everything and type Hatch. Select the lett
 You should see something like this! I chose the font *[Rush Driver](https://www.1001fonts.com/rush-driver-font.html)* and typed "Coding"!
 
 ![textobject]($lib/assets/textobject.webp?enhanced)
+
+## Distance & Dim
+
+If you want to print the project into a vinyl, for example, you would probably want to be able to know the measures inside Rhino; see the length of lines in millimeters, and there's a command for that! Make sure OSnap is turned on, and type `Distance`. Select the two points you want to measure, and it will show you the distance between them in the command line on the bottom of your screen. 
+
+There's another command that goes hand in hand with `Distance`, and it's the `Dim` command. This command will measure the length, but also create arrows and measurements for you in case you want to print those too. They'll look something like this:
+
+![dim]($lib/assets/dim_rhino.webp?enhanced)
+
+**DO** keep in mind that `Dim` will measure the horizontal distance and the vertical distance but not the diagonal distance like `Distance` does.
