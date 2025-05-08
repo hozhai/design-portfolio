@@ -142,3 +142,17 @@ There's another command that goes hand in hand with `Distance`, and it's the `Di
 For irregular shapes, sometimes it might be hard to measure the distance between two points. In this case, you can use the `BoundingBox` command, which will surround your object within a rectangle.
 
 If you want to scale the object to a specific amount, for example, to be 50mm wide, you can use the `Scale` command. This command will allow you to scale the object to a specific size by selecting two points and then entering the desired size.
+
+## Layers & Pictures
+
+To organize your project better, there is a tab on the right side of your screen with an icon that looks like a slice of cake. Click on it, and you'll see your properties panel be replaced with the layers panel, where you can see all the layers in the project. Layers can overlap each other, and you can make layers visible or invisible through the lightbulb icon; if the lightbulb is switched on, it's visible, and if not, then it's not.
+
+You can also click the lock icon to lock the layer, meaning you can no longer select it, which will help for our next command: `Picture`.
+
+The `Picture` command will open a file selection prompt where you can select an image file to insert into your project.
+
+Before anything, select your image and go to the properties panel and the materials tab; the tab right next to the object tab. It looks like a paint tube. Change the object transparency to something low, so you can see the lines when you trace over it.
+
+Select your image, go to its properties, and change the layer to another layer other than `Default`, and then lock the layer you moved the image to so you can no longer select it by accident.
+
+Now you can trace over the image! Here's me tracing a very important person in my life!
