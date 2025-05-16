@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Canvas } from '@threlte/core';
-	import HomeScene from '@/scenes/HomeScene.svelte';
 </script>
 
 <section class="bg-base-100 grid min-h-screen place-items-center">

@@ -156,3 +156,25 @@ Before anything, select your image and go to the properties panel and the materi
 Select your image, go to its properties, and change the layer to another layer other than `Default`, and then lock the layer you moved the image to so you can no longer select it by accident.
 
 Now you can trace over the image! Here's me tracing a very important person in my life!
+
+// TODO
+
+## Initials Decal
+
+Now that we know how to use Rhino, let's create a simple decal with our initials!
+
+First, I made a draft of all the possible ideas I had:
+
+![drafts]($lib/assets/initials_draft.webp?enhanced)
+
+I ended up choosing the one on the middle right. Here's it in Rhino!
+
+![initials]($lib/assets/initials_decal.webp?enhanced)
+
+This was a fun project! I ended up doing the design first, printed it, and had to add more at the end, but nonetheless it was a fun project and a great way to learn how to use Rhino as well. I was going to use the original profile picture (the head silhouette) but I was afraid that the hair strands would be smaller than 1mm. Here's my profile picture:
+
+![profile picture](https://avatars.githubusercontent.com/u/57015971)
+
+Other than that, I stuck to the design I had first and ended up with a project I'm pretty happy with!
+
+![final decal]($lib/assets/initials_decal_final.webp?enhanced)
